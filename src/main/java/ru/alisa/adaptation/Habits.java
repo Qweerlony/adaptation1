@@ -12,6 +12,7 @@ public final class Habits {
     }
 
     private static void onTick(MinecraftServer server) {
+        AdapState.tick();
         long day = AdapState.day();
         if (day != AdapState.countedDay) {
             AdapState.countedDay = day;
