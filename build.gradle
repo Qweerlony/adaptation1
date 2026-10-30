@@ -1,6 +1,6 @@
 plugins {
     // Для Minecraft 26.1+ (без обфускации) используется новый id плагина Loom
-    id 'net.fabricmc.fabric-loom' version '1.19'
+    id 'net.fabricmc.fabric-loom' version '1.18.2'
 }
 
 version = project.mod_version
