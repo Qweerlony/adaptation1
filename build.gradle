@@ -1,5 +1,4 @@
 plugins {
-    // Для Minecraft 26.1+ (без обфускации) используется новый id плагина Loom
     id 'net.fabricmc.fabric-loom' version '1.18.2'
 }
 
@@ -18,7 +17,6 @@ dependencies {
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc:fabric-api:${project.fabric_version}"
 }
-
 
 processResources {
     inputs.property "version", project.version
