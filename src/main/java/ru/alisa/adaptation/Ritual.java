@@ -16,20 +16,20 @@ public final class Ritual {
     private static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(LiteralArgumentBuilder.<CommandSourceStack>literal("adaptation")
             .executes(context -> {
-                context.getSource().sendFeedback(
+                context.getSource().sendSuccess(
                     () -> Component.literal(Scouts.summary()), false);
                 return 1;
             })
             .then(LiteralArgumentBuilder.<CommandSourceStack>literal("ritual")
                 .executes(context -> {
                     AdapState.reset();
-                    context.getSource().sendFeedback(
+                    context.getSource().sendSuccess(
                         () -> Component.literal("Ритуал очищения завершён: вся адаптация забыта."), false);
                     return 1;
                 }))
             .then(LiteralArgumentBuilder.<CommandSourceStack>literal("scout")
                 .executes(context -> {
-                    context.getSource().sendFeedback(
+                    context.getSource().sendSuccess(
                         () -> Component.literal(Scouts.report()), false);
                     return 1;
                 }))
